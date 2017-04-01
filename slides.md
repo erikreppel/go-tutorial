@@ -264,3 +264,24 @@ See `4_interfaces_and_structs/storage_interface` for an example of an interface 
 ---
 
 Interfaces are all nice because they allow you to test logic seperately from I/O. In the storage example we can implement the `Storage` interface in memory to make it easy to test our logic without having to deal with an FS or setting up an S3 bucket, yet still be able to test our implentation of an interface seperately.
+
+--- 
+
+## A fun example
+
+---
+
+golang's built in `http` library has a function `ListenAndServe`
+
+![Imgur](http://i.imgur.com/deoTABe.png)
+
+---
+
+![Imgur](http://i.imgur.com/WSfpTNM.png)
+
+---
+
+Since its an interface we can make any interface fufil it, see `server_interface/`
+
+---
+
