@@ -209,3 +209,58 @@ import (
 
 ---
 
+# 2: Testing and Benchmarking
+
+## Its super easy and has great tooling built into stdlib, see example.
+
+---
+
+# 3: Error handling
+
+---
+
+# 3: Error handling
+
+- Go forces you to think of all possible things that could go wrong and gracefully handle situations of failure
+- This makes run time panics (what go calls exceptions) very rare
+
+---
+
+# 4: Interfaces and Structs
+
+---
+
+# 4: Interfaces and Structs
+
+## Interfaces
+- a criteria that something must fufil
+- In go `error` is an interface
+
+---
+
+This is the entire definition of `error` in go:
+
+```
+type error interface {
+    Error() string
+}
+```
+
+[https://godoc.org/builtin#error](https://godoc.org/builtin#error)
+
+---
+
+# 4: Interfaces and Structs
+
+This means anything can be used as an `error` as long as it has a function of `Error` that takes to args and returns a string.
+
+You can define functions on any type, and you can define a wrapper type on almost anything, so you and shape almost any type of data into a interface if needed (really, powerful, but can add unnecasarry complexity to code very quickly)
+
+See `4_interfaces_and_structs/error_interface` for examples.
+
+See `4_interfaces_and_structs/storage_interface` for an example of an interface that allows to easilly swap storage backend for an application.
+
+
+---
+
+Interfaces are all nice because they allow you to test logic seperately from I/O. In the storage example we can implement the `Storage` interface in memory to make it easy to test our logic without having to deal with an FS or setting up an S3 bucket, yet still be able to test our implentation of an interface seperately.
