@@ -38,4 +38,21 @@ func main() {
 
 	fmt.Printf("Checkout %s for more examples of data types", "https://gobyexample.com")
 
+	fmt.Println("Here some functional magic because why not")
+
+	fn := func() func() {
+		x := 5
+		return func() {
+			fmt.Println("x is", x)
+			x++
+		}
+	}
+
+	fmt.Println("fn is an anonymous function that returns a function")
+
+	counter := fn()
+	counter() // -> 5
+	counter() // -> 6
+	counter() // -> 7
+
 }
