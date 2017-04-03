@@ -285,3 +285,48 @@ Since its an interface we can make any interface fufil it, see `server_interface
 
 ---
 
+# 5: Concurrency
+
+---
+
+# 5: Concurrency
+
+- Primary primative is the goroutine
+	- light weight thread, green thread, co-routine
+	- `go somefunc()` runs function in new goroutine
+- Channels are used to communicate
+	- Basically memory thread safe queues that can be used to send data between goroutines
+	- Cannot alter data in the queue, must take out of the queue, mutate, reinsert
+	- "Don't communicate by sharing memory, share memory by communicating"
+	- channels have types, but you can have channels of channels
+---
+
+# 5: Concurrency
+
+Go also comes with mutexes, semaphores, and other common concurrent primates, as well as waitgroups. Waitgroups are like semaphores on easy mode, everything else I rarely touch, you can write almost any concurrent program with goroutines, channels, and wait groups
+
+---
+
+## Some results from the `onetomany` directory
+
+---
+
+## Serial
+![Imgur](http://i.imgur.com/xFbFcNn.png)
+
+---
+
+## Concurrent
+![Imgur](http://i.imgur.com/Teb2sX6.png)
+
+---
+
+## Raw speed comparison
+(with a timeout in each func call)
+![Imgur](http://i.imgur.com/k9DKR7H.png)
+(Without a timeout in each func call)
+![Imgur](http://i.imgur.com/w03yMr3.png)
+
+---
+
+

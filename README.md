@@ -18,7 +18,7 @@
 
 
 ## Resources
-- [godoc (probably the best docs of any language)](https://godoc.org)
+- [godoc (the best docs of any language I've seen)](https://godoc.org)
 - [Go and Google transcript](https://talks.golang.org/2012/splash.article)
 - [Go at Google video](https://www.infoq.com/presentations/Go-Google)
 - [Go in production](https://peter.bourgon.org/go-in-production/)
