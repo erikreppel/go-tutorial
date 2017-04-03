@@ -1,0 +1,2 @@
+benchmark:
+	go test ./... -bench=.
