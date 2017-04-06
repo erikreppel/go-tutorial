@@ -12,9 +12,7 @@
 2. Testing and benchmarking
 3. Error handling
 4. Interface and structs
-5. Hello, concurrency
-6. Advanced concurrency
-7. Web app
+5. Concurrency
 
 
 ## Resources
